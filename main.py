@@ -20,7 +20,7 @@ db = Database(DB_URL, DB_NAME)
 
 
 Bot = Client(
-    "BroadcastBot",
+    "AGORA BROADCAST BOT",
     bot_token=config.BOT_TOKEN,
     api_id=config.API_ID,
     api_hash=config.API_HASH,
@@ -41,21 +41,21 @@ async def startprivate(client, message):
         if LOG_CHANNEL:
             await client.send_message(
                 LOG_CHANNEL,
-                f"#NEWUSER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{BOT_USERNAME} !!",
+                f"#AGORA-ARMY: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{BOT_USERNAME} !!",
             )
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
     joinButton = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/nacbots"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/AGORA_ROBOTS"),
                 InlineKeyboardButton(
-                    "SUPPORT GROUP", url="https://t.me/n_a_c_bot_developers"
+                    "SUPPORT GROUP", url="https://t.me/AGORA_ARMY"
                 ),
             ]
         ]
     )
-    welcomed = f"Hey <b>{message.from_user.first_name}</b>\nI'm a simple Telegram bot that can broadcast messages and media to the bot subscribers. Made by @NACBOTS.\n\n 🎚 use /settings"
+    welcomed = f"Hey <b>{message.from_user.first_name}</b>\nI'm a simple Telegram bot that can broadcast messages and media to the bot subscribers. Made by @Agora_Robots.\n\n 🎚 use /settings"
     await message.reply_text(welcomed, reply_markup=joinButton)
     raise StopPropagation
 
