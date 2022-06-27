@@ -7,10 +7,10 @@
         "bot",
         "broadcast Bot",
         "Telegram Bot",
-        "NacBots"
+        "AgoraRobots"
     ],
-    "website": "https://t.me/NacBots",
-    "repository": "https://github.com/nacbots/BroadcastBot",
+    "website": "https://t.me/Agora_Robots",
+    "repository": "https://github.com/MR-AGORA/AGORA-BROADCASTBOT",
     "success_url": "https://github.com/nacbots",
     "env": {
         "BOT_TOKEN": {
@@ -36,7 +36,7 @@
         },
         "DB_NAME": {
             "description": "A database name without white space(example : broadcastbot)",
-            "value": "BroadcastBot",
+            "value": "Agora BroadcastBot",
             "required": false
         },
         "AUTH_USERS": {
